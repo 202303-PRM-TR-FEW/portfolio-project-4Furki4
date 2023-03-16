@@ -17,16 +17,23 @@ body {
     background-color: var(--main-background);
 }
 
+.card,
+.sidenav {
+    box-shadow: -5px 5px 5px #c9c9c9, 5px -5px 5px #c9c9c9;
+}
+
+
 .container {
     margin-top: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
 .sidenav {
-    width: 20%;
+    width: 22.5%;
     background-color: var(--sidenav-background);
-    box-shadow: -5px 5px 5px #c9c9c9, 5px -5px 5px #c9c9c9;
 }
 
 figure {
@@ -46,3 +53,25 @@ figcaption {
 }
 
 .contacts {}
+
+.contacts ul {
+    list-style: none;
+    margin-top: 0;
+    font-size: 1.25rem;
+    padding: 1em;
+}
+
+
+.about-me {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: var(--sidenav-background);
+}
+
+.card:last-child {
+    margin-top: 1rem;
+}
