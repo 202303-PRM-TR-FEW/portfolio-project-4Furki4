@@ -1,0 +1,238 @@
+:root {
+    font-size: 16px;
+    --footer-color: #1d0042;
+    --main-background: #f1f1f1;
+    --sidenav-background: #ffffff;
+    --progress-bar-bg: #f1f1f1;
+
+
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    width: 100%;
+    background-color: var(--main-background);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: -1px -1px 4px currentColor;
+    transition: all ease-out .25s;
+}
+
+.card,
+.sidenav {
+    transition: box-shadow ease-out 1s;
+    box-shadow: -5px 5px 5px #c9c9c9, 5px -5px 5px #c9c9c9;
+}
+
+.card:hover,
+.sidenav:hover {
+    transition: all ease-out 1s;
+    box-shadow: -5px 5px 5px purple, 5px -5px 5px purple;
+
+}
+
+.container {
+    width: 80%;
+    margin-inline: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.sidenav {
+    width: 27.5%;
+    background-color: var(--sidenav-background);
+    align-self: flex-start;
+    position: sticky;
+    top: 5%;
+    margin-bottom: 2rem;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    font-weight: bold;
+    bottom: 1rem;
+    left: .5rem;
+    padding: 0 1rem;
+    text-shadow: -2px -1px 10px var(--main-background);
+    font-size: 1.5rem;
+    color: var(--sidenav-background);
+}
+
+
+.contacts hr {
+    border: 0;
+    border-radius: 4rem;
+    border-bottom: .4vh solid;
+    width: 90%;
+    color: var(--footer-color);
+}
+
+.contacts ul {
+    list-style: none;
+    margin-top: 0;
+    font-size: min(1.25vw, 1.25rem);
+    padding-top: .75em;
+    padding-inline: 1em;
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.contacts ul>li {
+    margin-bottom: .75em;
+    flex-shrink: 1;
+}
+
+/* icons are taken from icons8.com */
+#school-icon,
+#project-icon,
+#briefcase-icon,
+#location-icon,
+#mail-icon,
+#github-icon,
+img.calendar-icon {
+    filter: invert(13%) sepia(84%) saturate(5340%) hue-rotate(294deg) brightness(64%) contrast(109%);
+    position: relative;
+}
+
+#briefcase-icon,
+#location-icon {
+    top: 0.15em;
+}
+
+#mail-icon {
+    top: .25em;
+}
+
+#github-icon {
+    top: .25em;
+}
+
+#school-icon {
+    top: .15em;
+    margin-right: .5em;
+}
+
+#project-icon {
+    top: .25em;
+    margin-right: .5em;
+}
+
+img.calendar-icon {
+    top: .2em;
+    margin-right: .15em;
+}
+
+.knowledge-area {
+    padding: 1rem;
+}
+
+.progress-bar {
+    border-radius: 1rem;
+    padding: 0;
+    background-color: var(--progress-bar-bg);
+    width: 90%;
+    margin-inline: auto;
+    height: 1rem;
+    color: var(--main-background);
+}
+
+.progress-bar>span {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-align: center;
+}
+
+#net {
+    background: linear-gradient(to right, var(--footer-color), purple 75%);
+    width: 75%;
+}
+
+.about-me {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.card {
+    background-color: var(--sidenav-background);
+    padding: 1rem 2rem;
+}
+
+.card:last-child {
+    margin-top: 1rem;
+}
+
+
+.activity-date {
+    display: inline;
+    color: purple;
+}
+
+.info img {
+    filter: invert(13%) sepia(84%) saturate(5340%) hue-rotate(294deg) brightness(64%) contrast(109%);
+    /* filter by https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.card>h2 {
+    display: inline;
+}
+
+.card h2,
+h3 {
+    color: #757577;
+}
+
+.current {
+    font-size: .9em;
+    border-radius: .25rem;
+    padding: .2rem .5rem;
+    background-color: #800080;
+    color: var(--main-background);
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--footer-color);
+    text-align: center;
+    color: var(--main-background);
+    padding: 1rem;
+}
