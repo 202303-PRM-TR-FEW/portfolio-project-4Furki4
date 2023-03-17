@@ -3,6 +3,9 @@
     --footer-color: #1d0042;
     --main-background: #f1f1f1;
     --sidenav-background: #ffffff;
+    --progress-bar-bg: #f1f1f1;
+
+
     box-sizing: border-box;
 }
 
@@ -25,6 +28,15 @@ body {
     background-color: var(--main-background);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: -1px -1px 4px currentColor;
+    transition: all ease-out .25s;
+}
+
 .card,
 .sidenav {
     box-shadow: -5px 5px 5px #c9c9c9, 5px -5px 5px #c9c9c9;
@@ -41,11 +53,12 @@ body {
 }
 
 .sidenav {
-    width: 22.5%;
+    width: 27.5%;
     background-color: var(--sidenav-background);
     align-self: flex-start;
     position: sticky;
     top: 5%;
+    margin-bottom: 2rem;
 }
 
 figure {
@@ -64,18 +77,100 @@ figcaption {
     color: var(--sidenav-background);
 }
 
-.contacts {}
+
+.contacts hr {
+    border: 0;
+    border-radius: 4rem;
+    border-bottom: .4vh solid;
+    width: 90%;
+    color: var(--footer-color);
+}
 
 .contacts ul {
     list-style: none;
     margin-top: 0;
-    font-size: 1.25rem;
-    padding: 1em;
+    font-size: min(1.25vw, 1.25rem);
+    padding-top: .75em;
+    padding-inline: 1em;
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
 }
 
 
-.about-me {
+
+.contacts ul>li {
+    margin-bottom: .75em;
+    flex-shrink: 1;
+}
+
+#briefcase-icon,
+#location-icon {
+    position: relative;
+    top: 0.15em;
+}
+
+#mail-icon {
+    position: relative;
+    top: .25em;
+}
+
+#github-icon {
+    position: relative;
+    top: .25em;
+}
+
+.knowledge-area {
+    padding: 1rem;
+}
+
+.progress-bar {
+    border-radius: 1rem;
+    padding: 0;
+    background-color: var(--progress-bar-bg);
+    width: 90%;
+    margin-inline: auto;
+    height: 1rem;
+    color: var(--main-background);
+}
+
+.progress-bar>span {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-align: center;
+}
+
+#net {
+    background: linear-gradient(to right, var(--footer-color), purple 75%);
     width: 75%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-me {
+    width: 70%;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
