@@ -39,7 +39,15 @@ a:hover {
 
 .card,
 .sidenav {
+    transition: box-shadow ease-out 1s;
     box-shadow: -5px 5px 5px #c9c9c9, 5px -5px 5px #c9c9c9;
+}
+
+.card:hover,
+.sidenav:hover {
+    transition: all ease-out 1s;
+    box-shadow: -5px 5px 5px purple, 5px -5px 5px purple;
+
 }
 
 .container {
@@ -106,20 +114,44 @@ figcaption {
     flex-shrink: 1;
 }
 
+/* icons are taken from icons8.com */
+#school-icon,
+#project-icon,
+#briefcase-icon,
+#location-icon,
+#mail-icon,
+#github-icon,
+img.calendar-icon {
+    filter: invert(13%) sepia(84%) saturate(5340%) hue-rotate(294deg) brightness(64%) contrast(109%);
+    position: relative;
+}
+
 #briefcase-icon,
 #location-icon {
-    position: relative;
     top: 0.15em;
 }
 
 #mail-icon {
-    position: relative;
     top: .25em;
 }
 
 #github-icon {
-    position: relative;
     top: .25em;
+}
+
+#school-icon {
+    top: .15em;
+    margin-right: .5em;
+}
+
+#project-icon {
+    top: .25em;
+    margin-right: .5em;
+}
+
+img.calendar-icon {
+    top: .2em;
+    margin-right: .15em;
 }
 
 .knowledge-area {
@@ -152,28 +184,12 @@ figcaption {
     width: 75%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .about-me {
     width: 70%;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+    font-size: 1.25rem;
 }
 
 .card {
@@ -183,6 +199,34 @@ figcaption {
 
 .card:last-child {
     margin-top: 1rem;
+}
+
+
+.activity-date {
+    display: inline;
+    color: purple;
+}
+
+.info img {
+    filter: invert(13%) sepia(84%) saturate(5340%) hue-rotate(294deg) brightness(64%) contrast(109%);
+    /* filter by https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.card>h2 {
+    display: inline;
+}
+
+.card h2,
+h3 {
+    color: #757577;
+}
+
+.current {
+    font-size: .9em;
+    border-radius: .25rem;
+    padding: .2rem .5rem;
+    background-color: #800080;
+    color: var(--main-background);
 }
 
 footer {
