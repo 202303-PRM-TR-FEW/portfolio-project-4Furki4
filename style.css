@@ -14,6 +14,12 @@ html {
 }
 
 
+h2,
+h3,
+.sidenav {
+    color: #757577;
+}
+
 html,
 body {
     padding: 0;
@@ -39,6 +45,7 @@ a:hover {
 
 .card,
 .sidenav {
+    border-radius: 1rem;
     transition: box-shadow ease-out 1s;
     box-shadow: -5px 5px 5px #c9c9c9, 5px -5px 5px #c9c9c9;
 }
@@ -61,6 +68,9 @@ a:hover {
 }
 
 .sidenav {
+    /* border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem; */
+
     width: 27.5%;
     background-color: var(--sidenav-background);
     align-self: flex-start;
@@ -70,8 +80,14 @@ a:hover {
 }
 
 figure {
+
     margin: 0;
     position: relative;
+}
+
+figure>img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 figcaption {
@@ -155,14 +171,19 @@ img.calendar-icon {
 }
 
 .knowledge-area {
-    padding: 1rem;
+    padding-bottom: 1rem;
+}
+
+.knowledge-area h3,
+h4 {
+    padding-left: 2rem;
 }
 
 .progress-bar {
     border-radius: 1rem;
     padding: 0;
     background-color: var(--progress-bar-bg);
-    width: 90%;
+    width: 80%;
     margin-inline: auto;
     height: 1rem;
     color: var(--main-background);
@@ -177,12 +198,41 @@ img.calendar-icon {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     text-align: center;
+    background: linear-gradient(to right, var(--footer-color), purple 75%);
+}
+
+#html-css {
+    width: 75%;
 }
 
 #net {
-    background: linear-gradient(to right, var(--footer-color), purple 75%);
-    width: 75%;
+    width: 70%;
 }
+
+#angular {
+    width: 65%;
+}
+
+#javascript {
+    width: 60%;
+}
+
+.languages {
+    margin-top: 3em;
+}
+
+
+#turkish {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#english {
+    width: 70%;
+}
+
+
+
 
 .about-me {
     width: 70%;
@@ -216,10 +266,7 @@ img.calendar-icon {
     display: inline;
 }
 
-.card h2,
-h3 {
-    color: #757577;
-}
+
 
 .current {
     font-size: .9em;
