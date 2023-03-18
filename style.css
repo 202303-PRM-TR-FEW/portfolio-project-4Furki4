@@ -4,13 +4,12 @@
     --main-background: #f1f1f1;
     --sidenav-background: #ffffff;
     --progress-bar-bg: #f1f1f1;
-
-
-    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 html {
     height: 100%;
+
 }
 
 
